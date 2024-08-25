@@ -1,35 +1,6 @@
 # React-Js-Projects
 A collection of basic React.js projects built during my learning journey. These projects demonstrate my understanding of fundamental React concepts and techniques.
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>React Learning Projects</title>
-	<style>
-		body {
-			font-family: Arial, sans-serif;
-			margin: 20px;
-		}
-		.header {
-			background-color: #f0f0f0;
-			padding: 20px;
-			text-align: center;
-		}
-		.project-list {
-			list-style: none;
-			padding: 0;
-			margin: 0;
-		}
-		.project-list li {
-			margin-bottom: 10px;
-		}
-		.project-list li::before {
-			content: "📁";
-			margin-right: 10px;
-		}
-	</style>
-</head>
+
 <body>
 	<div class="header">
 		<h1>React Learning Projects</h1>
