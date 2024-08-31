@@ -50,6 +50,20 @@ const TextArea = ({setAlert}) => {
     setAlert("All extra space has been removed");
   }
 
+
+  const handleSave = () => {
+    const element = document.createElement('a');
+    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+    element.setAttribute('download', 'text.txt');
+
+    element.style.display = 'none';
+    document.body.appendChild(element);
+
+    element.click();
+
+    document.body.removeChild(element);
+  };
+
   return (
     <>
       <div className='container mx-auto mt-5 p-5 bg-green-100 shadow-lg'>
@@ -62,21 +76,22 @@ const TextArea = ({setAlert}) => {
           }}></textarea>
 
         <div id="btnContainer" className='mt-3 flex justify-start gap-2 flex-wrap'>
-          <TooltipBtn btnName="Uppercase" toolTip="Uppercase" workGiven = {handleUpperCase}/>
-          <TooltipBtn btnName="Lowercase" toolTip="Lowercase" workGiven = {handleLowerCase}/>
-          <TooltipBtn btnName="Bold" toolTip="Bold" workGiven = {handleBold}/>
-          <TooltipBtn btnName="Italic" toolTip="Italic" workGiven = {handleItalic}/>
-          <TooltipBtn btnName="Undeline" toolTip="Underline" workGiven = {handleUnderline} />
-          <TooltipBtn btnName="Clear" toolTip="Clear" workGiven = {handleClear}/>
-          <TooltipBtn btnName="Copy" toolTip="Copy Text" workGiven = {handleCopy}/>
-          <TooltipBtn btnName="Remove Extra Space" toolTip="Remove Extra Space" workGiven = {handleSpace}/>
+          <TooltipBtn btnName="Uppercase" toolTip="Uppercase" workGiven = {handleUpperCase} text = {text}/>
+          <TooltipBtn btnName="Lowercase" toolTip="Lowercase" workGiven = {handleLowerCase} text = {text}/>
+          <TooltipBtn btnName="Bold" toolTip="Bold" workGiven = {handleBold} text = {text}/>
+          <TooltipBtn btnName="Italic" toolTip="Italic" workGiven = {handleItalic} text = {text}/>
+          <TooltipBtn btnName="Undeline" toolTip="Underline" workGiven = {handleUnderline} text = {text} />
+          <TooltipBtn btnName="Clear" toolTip="Clear" workGiven = {handleClear} text = {text}/>
+          <TooltipBtn btnName="Copy" toolTip="Copy Text" workGiven = {handleCopy} text = {text}/>
+          <TooltipBtn btnName="Remove Extra Space" toolTip="Remove Extra Space" workGiven = {handleSpace} text = {text}/>
+          <TooltipBtn btnName="Save" toolTip="Save txt" workGiven = {handleSave} text = {text}/>
         </div>
       </div>
 
       <div className='container mx-auto bg-red-100 mt-5 p-5 shadow-lg'>
         <h1 className="text-[2rem] font-bold mb-3 underline">Text Summary</h1>
         <p>Text Count: {text.length}</p>
-        <p>Word Count: {text.split(" ").length}</p>
+        <p>Word Count: {text.split(/\s+/).filter((element)=> {return element.length !== 0}).length}</p>
         <h2 className='text-[1.5rem] my-3 underline'>Preview</h2>
         <p style={{ 
           fontWeight: isBold ? 'bold' : 'normal', 
