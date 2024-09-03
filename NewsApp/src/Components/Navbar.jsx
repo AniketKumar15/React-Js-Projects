@@ -115,8 +115,8 @@ const Navbar = ({ setCategory, setCountry}) => {
             <option value="technology" className='text-black'>Technology</option>
           </select>
 
-          <select className='bg-transparen' onChange={handleCountryChange}>
-            {options.map((option, index) => (
+          <select className='bg-transparent block hover:text-gray-300 ml-4 mt-3 hover:underline' onChange={handleCountryChange}>
+            {option.map((option, index) => (
               <option key={index} value={option.value}>
                 {option.label}
               </option>
