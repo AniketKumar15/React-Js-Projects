@@ -22,7 +22,7 @@ const NewsBoard = ({ category, country }) => {
     let isMounted = true;
 
     const fetchData = async () => {
-      let url = `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=ea3e8db4aa7347c2b9d1f7ace59c7da7&page=${page}&pageSize=15`;
+      let url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${import.meta.env.VITE_API_KEY}&page=${page}&pageSize=15`;
       setLoading(true);
       let response = await fetch(url);
       let data = await response.json();
@@ -31,7 +31,6 @@ const NewsBoard = ({ category, country }) => {
       if (isMounted) {
         setArticles(data.articles);
         setLoading(false);
-        console.log(articles);
       }
     };
     fetchData();

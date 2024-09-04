@@ -35,7 +35,7 @@ const Navbar = ({ setCategory, setCountry}) => {
           <option value="technology" className='text-black'>Technology</option>
         </select>
 
-        <select className='bg-transparent'  onChange={handleCountryChange} defaultValue="in">
+        <select className='bg-transparent'  onChange={handleCountryChange} defaultValue="us" disabled>
           {option.map((option, index) => (
             <option key={index} value={option.value}>
               {option.label}
@@ -115,7 +115,7 @@ const Navbar = ({ setCategory, setCountry}) => {
             <option value="technology" className='text-black'>Technology</option>
           </select>
 
-          <select className='bg-transparent block hover:text-gray-300 ml-4 mt-3 hover:underline' onChange={handleCountryChange}>
+          <select className='bg-transparent block hover:text-gray-300 ml-4 mt-3 hover:underline' defaultValue="us" onChange={handleCountryChange} disabled>
             {option.map((option, index) => (
               <option key={index} value={option.value}>
                 {option.label}
