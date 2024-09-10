@@ -20,6 +20,7 @@
 	<ul>
 		<li>React.js</li>
 		<li>Tailwind</li>
+		<li>React Router</li>
 		<!-- Add more technologies here -->
 	</ul>
 	<h2>Learning Outcomes</h2>
