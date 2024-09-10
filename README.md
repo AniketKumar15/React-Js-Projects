@@ -10,6 +10,10 @@
 		<li>To Do List</li>
 		<li>News App</li>
 		<li>Text Editor</li>
+		<li>Portfolio website</li>
+<!-- 		<li>Text Editor</li>
+		<li>Text Editor</li>
+		<li>Text Editor</li> -->
 		<!-- Add more projects here -->
 	</ul>
 	<h2>Technologies Used</h2>
