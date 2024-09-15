@@ -11,9 +11,9 @@
 		<li>News App</li>
 		<li>Text Editor</li>
 		<li>Portfolio website</li>
-<!-- 		<li>Text Editor</li>
-		<li>Text Editor</li>
-		<li>Text Editor</li> -->
+		<li>Currency Converter</li>
+<!-- 		<li>Text Editor</li> -->
+<!-- 		<li>Text Editor</li> -->
 		<!-- Add more projects here -->
 	</ul>
 	<h2>Technologies Used</h2>
@@ -27,6 +27,8 @@
 	<ul>
 		<li>React components and props</li>
 		<li>State management and hooks</li>
+		<li>React Router</li>
+		<li>Tailwind</li>
 		<!-- Add more learning outcomes here -->
 	</ul>
 	<p>Note: These projects are for learning purposes only and are not intended for production use.</p>
