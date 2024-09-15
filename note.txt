@@ -18,6 +18,10 @@ content: [
 @tailwind components;
 @tailwind utilities;
 
-Here's a possible description:
+react router:
+npm i react-router-dom
 
+
+
+Here's a possible description:
 "For the purpose of practicing and improving my skills, I am using publicly available images from Google and blogs from other websites. The images and content are used solely for educational purposes and do not intend to infringe on any copyright or intellectual property rights. All credits and acknowledgments are given to the original creators and owners of the content."
