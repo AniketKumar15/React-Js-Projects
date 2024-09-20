@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const NavBar = ({ toggleMode, mode }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,8 +15,8 @@ const NavBar = ({ toggleMode, mode }) => {
       </div>
       <div className='flex gap-3'>
         <div className="hidden md:flex items-center space-x-4 text-lg">
-          <a href="/" className="hover:text-gray-300 hover:underline">Home</a>
-          <a href="/about" className="hover:text-gray-300 hover:underline">About</a>
+          <Link to="/" className="hover:text-gray-300 hover:underline">Home</Link>
+          <Link to="/about" className="hover:text-gray-300 hover:underline">About</Link>
         </div>
       </div>
 
@@ -79,8 +80,8 @@ const NavBar = ({ toggleMode, mode }) => {
               )}
             </svg>
           </button>
-          <a href="/" className="block hover:text-gray-800 ml-4 mt-10 hover:underline">Home</a>
-          <a href="/about" className="block hover:text-gray-800 ml-4 mt-3 hover:underline">About</a>
+          <Link to="/" className="block hover:text-gray-800 ml-4 mt-10 hover:underline">Home</Link>
+          <Link to="/about" className="block hover:text-gray-800 ml-4 mt-3 hover:underline">About</Link>
         </div>
       )}
     </nav>
