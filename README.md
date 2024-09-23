@@ -12,7 +12,7 @@
 		<li>Text Editor</li>
 		<li>Portfolio website</li>
 		<li>Currency Converter</li>
-<!-- 		<li>Text Editor</li> -->
+		<li>Leo-Chatbot</li>
 <!-- 		<li>Text Editor</li> -->
 		<!-- Add more projects here -->
 	</ul>
@@ -29,6 +29,7 @@
 		<li>State management and hooks</li>
 		<li>React Router</li>
 		<li>Tailwind</li>
+		<li>Learn how to change page, change url without using react router.(Project Name : Leo chatbot)</li>
 		<!-- Add more learning outcomes here -->
 	</ul>
 	<p>Note: These projects are for learning purposes only and are not intended for production use.</p>
