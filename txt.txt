@@ -1,0 +1,32 @@
+<div className="flex flex-col h-[96vh]">
+  <div className="container mx-auto py-4 px-5 flex-1 overflow-auto">
+    <div id="Message area">
+      <div id="user" className="flex justify-end items-center gap-3 mb-5">
+        <p className="bg-gray-50 py-2 px-6 rounded-full">
+          {prompt}
+        </p>
+        <img src={avtar} alt="" className="w-10 rounded-full" />
+      </div>
+      <div id="leo" className="flex justify-start items-start gap-3 mb-5">
+        <img src={logo} alt="" className="w-10 rounded-full" />
+        <p className="border-black border-[1px] py-2 px-3 rounded-xl">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non nulla reiciendis harum molestiae minima
+          dignissimos quo molestias a sapiente eos qui, est, autem voluptatibus ipsum sequi fuga commodi porro officiis.
+          Quo consequuntur tenetur cupiditate, ipsam cum sint cumque iusto saepe? Delectus nihil quidem distinctio
+          obcaecati qui blanditiis, repudiandae eveniet, consectetur magni nemo et nobis ratione maxime doloremque ex
+          reiciendis possimus. Dolore harum sed excepturi rerum ullam. Impedit quidem sunt vero similique, asperiores
+          recusandae facere atque? Illum mollitia voluptatem neque excepturi, ducimus nemo similique unde veniam porro?
+          Incidunt soluta voluptatem excepturi.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div className="bg-gray-100 flex justify-center items-center container mx-auto py-1 pl-5 pr-2 rounded-full mb-5 mt-2">
+    <input type="text" placeholder="Enter Your Prompt" className="w-full bg-transparent outline-none" value={prompt}
+      onChange={(e)=> {setPrompt(e.target.value)}}
+    />
+    <button onClick={callApi} className="bg-white rounded-full py-4 px-4 flex justify-center items-center">
+      <i className="fa-solid fa-arrow-right"></i>
+    </button>
+  </div>
+</div>
