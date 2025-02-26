@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Option from './Option';
 
-const Navbar = ({ setCategory, setCountry}) => {
+const Navbar = ({ setCategory, setCountry }) => {
 
   const [isOpen, setIsOpen] = useState(false);
   const option = Option();
@@ -24,7 +24,7 @@ const Navbar = ({ setCategory, setCountry}) => {
         <h1 className='text-xl border px-2 hover:bg-orange-400 transition duration-500 ease-in-out cursor-pointer'>News Savage</h1>
       </div>
       <div className="hidden md:flex items-center space-x-4">
-        <a href="#" className="hover:text-gray-300 hover:underline">Home</a>
+        <a href="home" className="hover:text-gray-300 hover:underline">Home</a>
         <select className='bg-transparent' onChange={handleCategoryChange}>
           <option value="general" className='text-black'>Latest News</option>
           <option value="entertainment" className='text-black' >Entertainment</option>
@@ -35,7 +35,7 @@ const Navbar = ({ setCategory, setCountry}) => {
           <option value="technology" className='text-black'>Technology</option>
         </select>
 
-        <select className='bg-transparent'  onChange={handleCountryChange} defaultValue="us" disabled>
+        <select className='bg-transparent' onChange={handleCountryChange} defaultValue="us" disabled>
           {option.map((option, index) => (
             <option key={index} value={option.value}>
               {option.label}

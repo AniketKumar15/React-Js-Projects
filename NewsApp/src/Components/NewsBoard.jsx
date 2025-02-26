@@ -26,7 +26,7 @@ const NewsBoard = ({ category, country }) => {
       setLoading(true);
       let response = await fetch(url);
       let data = await response.json();
-      setPageCount(Math.ceil(data.totalResults/15));
+      setPageCount(Math.ceil(data.totalResults / 15));
 
       if (isMounted) {
         setArticles(data.articles);
@@ -40,7 +40,7 @@ const NewsBoard = ({ category, country }) => {
 
   }, [category, country, page]);
 
-  useEffect(()=>{
+  useEffect(() => {
     setPage(1);
   }, [category, country]);
 
@@ -54,7 +54,7 @@ const NewsBoard = ({ category, country }) => {
   return (
     <div>
       <h2 className="text-center text-xl font-bold my-5">{category.toUpperCase()} <span className="inline-flex items-center rounded-md bg-red-50 px-2 py-1.5 text-xs font-bold text-red-600 ring-1 ring-inset ring-red-600/10">NEWS</span></h2>
-      {isLoading && <Loader/>}
+      {isLoading && <Loader />}
 
       {!isLoading && <div className="flex flex-wrap py-3 px-5 gap-10 justify-center">
         {articles.map((news, index) => {
