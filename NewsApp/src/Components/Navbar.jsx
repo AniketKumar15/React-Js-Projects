@@ -35,13 +35,13 @@ const Navbar = ({ setCategory, setCountry }) => {
           <option value="technology" className='text-black'>Technology</option>
         </select>
 
-        <select className='bg-transparent' onChange={handleCountryChange} defaultValue="us" disabled>
+        {/* <select className='bg-transparent' onChange={handleCountryChange} defaultValue="us" disabled>
           {option.map((option, index) => (
             <option key={index} value={option.value}>
               {option.label}
             </option>
           ))}
-        </select>
+        </select> */}
 
       </div>
       <div className="md:hidden flex items-center">
@@ -115,13 +115,13 @@ const Navbar = ({ setCategory, setCountry }) => {
             <option value="technology" className='text-black'>Technology</option>
           </select>
 
-          <select className='bg-transparent block hover:text-gray-300 ml-4 mt-3 hover:underline' defaultValue="us" onChange={handleCountryChange} disabled>
+          {/* <select className='bg-transparent block hover:text-gray-300 ml-4 mt-3 hover:underline' defaultValue="us" onChange={handleCountryChange} disabled>
             {option.map((option, index) => (
               <option key={index} value={option.value}>
                 {option.label}
               </option>
             ))}
-          </select>
+          </select> */}
         </div>
       )}
     </nav>
